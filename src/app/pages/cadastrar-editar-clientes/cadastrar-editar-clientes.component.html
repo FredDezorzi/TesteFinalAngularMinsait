@@ -1,0 +1,65 @@
+<h1 class="display-6">{{clientecpf ?  'Editar' : 'Cadastrar'}}</h1>
+<hr/>
+<a routerLink="/clientes">
+  <button class="btn btn-dark mx-2">
+    <i class="bi bi-arrow-left-circle"></i> Voltar
+  </button>
+</a>
+<p class="m-2">Preencha as informações sobre o cliente:</p>
+
+<div class="container-fluid">
+  <form [formGroup]="clienteForm" (ngSubmit)="clientecpf ?  editar() : cadastrar()">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome:</label>
+          <input id="nome" type="text" class="form-control" placeholder="Ex: Maria da Silva do Nascimento" formControlName="nome"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="cpf" class="form-label">CPF:</label>
+          <ng-container *ngIf="!clientecpf; else inputDisabled">
+            <input #cpfInput id="cpf" type="text" class="form-control" placeholder="111.222.333-45"  formControlName="cpf" />
+          </ng-container>
+          <ng-template #inputDisabled>
+            <input id="cpf" type="text" class="form-control" [placeholder]="clientecpf" [disabled]="true"/>
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone:</label>
+          <input #phoneInput id="telefone" type="text" class="form-control" placeholder="Ex:(11)98888-7777" formControlName="telefone"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="rua" class="form-label">Rua:</label>
+          <input id="rua" type="text" class="form-control" placeholder="Ex: Rua Augusta" formControlName="rua"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="numero" class="form-label">Nº:</label>
+          <input id="numero" type="text" class="form-control" placeholder="Ex: 1234" formControlName="numero"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="cep" class="form-label">CEP:</label>
+          <input #cepInput id="cep" type="text" class="form-control" placeholder="Ex: 01310-100" formControlName="cep"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="rendimentoMensal" class="form-label">Rendimento Mensal:</label>
+          <input id="rendimentoMensal" type="number" class="form-control" formControlName="rendimentoMensal" min="0"/>
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-dark">{{clientecpf ?  'Editar' : 'Cadastrar'}}</button>
+  </form>
+</div>
+
+
