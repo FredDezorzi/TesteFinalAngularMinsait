@@ -58,7 +58,10 @@
         </div>
       </div>
     </div>
-    <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-dark">{{clientecpf ?  'Editar' : 'Cadastrar'}}</button>
+    <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-dark">
+      <i class="{{clientecpf ?  'bi bi-pencil-square' : 'bi bi-person-fill-add'}}"></i>
+      {{clientecpf ?  'Editar' : 'Cadastrar'}}
+    </button>
   </form>
 </div>
 
