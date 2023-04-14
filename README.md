@@ -9,7 +9,7 @@ Essa é uma aplicação Front-End desenvolvida para fins de estudo. O objetivo d
 - Sweetalert2 (versão 11.7.3 ou superior)
 - Inputmask (versão 5.0.8 ou superior)
 
-##Instalação
+## Instalação
 - Clone o repositório.
 - Execute o comando npm install para instalar as dependências do projeto.
 - Execute o comando ng serve para iniciar o servidor de desenvolvimento.
