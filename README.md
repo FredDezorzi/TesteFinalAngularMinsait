@@ -32,8 +32,8 @@ Este projeto foi desenvolvido por Frederico Costa do Nascimento Dezorzi. Entre e
 
 - E-mail: fred.dezorzi@gmail.com
 - Telefone: (11) 97286-1327
-- LinkedIn: https://www.linkedin.com/in/frederico-costa-do-nascimento-dezorzi-529518182
-- GitHub: https://github.com/Fred
+- LinkedIn: https://www.linkedin.com/in/frederico-dezorzi-529518182/
+- GitHub: https://github.com/FredDezorzi
 
 ## Agradecimentos
 Agradeço a Minsait por disponibilizar o teste e permitir o desenvolvimento deste projeto.
